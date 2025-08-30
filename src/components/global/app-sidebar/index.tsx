@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/sidebar";
 import { Project, User } from "@/generated/prisma";
 import { Avatar, AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
+import NavMain from "./nav-main";
 
 
 
@@ -32,9 +33,9 @@ const AppSidebar = ({ recentProjects, user, ...props }: { recentProjects: Projec
                     <span  className="truncate text-primary text-3xl font-semibold ">PrepSlide</span>
                 </SidebarMenuButton>
             </SidebarHeader>
-            <SidebarContent>
-                <SidebarGroup />
-                <SidebarGroup />
+            <SidebarContent className="px-3 gap-y-6 mt-10">
+                <NavMain/>
+                
                 <SidebarContent />
             </SidebarContent>
             <SidebarFooter />
